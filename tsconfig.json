@@ -1,0 +1,36 @@
+{
+	"include": ["./src/**/*", "./build.ts"],
+	"compilerOptions": {
+		"types": ["@types/node"],
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"target": "ES2022",
+		"lib": ["ESNext"],
+		"allowJs": false,
+		"resolveJsonModule": true,
+		"moduleDetection": "force",
+		"isolatedModules": true,
+		"noErrorTruncation": true,
+		"strict": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noUncheckedIndexedAccess": true,
+		"noImplicitAny": true,
+		"preserveConstEnums": true,
+		"experimentalDecorators": false,
+		"forceConsistentCasingInFileNames": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitOverride": true,
+		"allowUnreachableCode": false,
+		"allowUnusedLabels": false,
+		"verbatimModuleSyntax": true,
+		"module": "ESNext",
+		"moduleResolution": "node",
+		"noEmit": true,
+		"incremental": true,
+		"baseUrl": "./",
+		"paths": {
+			"~/*": ["./src/*"]
+		}
+	}
+}
