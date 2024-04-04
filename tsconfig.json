@@ -1,7 +1,6 @@
 {
 	"include": ["./src/**/*", "./build.ts"],
 	"compilerOptions": {
-		"types": ["@types/node"],
 		"esModuleInterop": true,
 		"skipLibCheck": true,
 		"target": "ES2022",
