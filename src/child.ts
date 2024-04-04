@@ -1,3 +1,3 @@
 export function child() {
-	"Hello from child.ts";
+	return "Hello from child.ts";
 }
