@@ -13,16 +13,14 @@ export async function main({
 	projectGitTree: SmartGithubTree;
 }) {
 	const assetTree = await selfGitTree.getEntry("/assets");
-	if (!assetTree.success || assetTree.value.type !== "tree") {
+	if (assetTree.type !== "tree") {
 		logger.error("No asset folder found");
 		throw new Error("No asset folder found");
 	}
 	logger.info("Adding assets folder");
-	await projectGitTree.deleteFile("test.md");
-	await projectGitTree.addTree(
-		"/assets",
-		await assetTree.value.retriveFullTree(),
-	);
+	await projectGitTree.deleteFile("test.md").catch(() => {});
+	await projectGitTree.addTree("/assets", await assetTree.retriveFullTree());
+	logger.debug(await projectGitTree.retriveFullTree());
 	await projectGitTree.commit("Add assets folder");
 	logger.success("fixed assets folder");
 }
