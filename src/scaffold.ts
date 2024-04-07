@@ -31,3 +31,7 @@ export async function main({
 	logger.debug(6);
 	logger.success("fixed assets folder");
 }
+
+export default {
+	value: true,
+}
